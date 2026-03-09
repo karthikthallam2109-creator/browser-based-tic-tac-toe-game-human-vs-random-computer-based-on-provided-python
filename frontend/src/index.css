@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.75rem;
+        /* Warm neutral palette - sand/stone/amber */
+        --background: 0.98 0.01 60;
+        --foreground: 0.25 0.02 50;
+        --card: 1 0.005 60;
+        --card-foreground: 0.25 0.02 50;
+        --popover: 1 0.005 60;
+        --popover-foreground: 0.25 0.02 50;
+        /* Warm amber primary */
+        --primary: 0.65 0.15 65;
+        --primary-foreground: 0.98 0.01 60;
+        /* Soft stone secondary */
+        --secondary: 0.92 0.01 55;
+        --secondary-foreground: 0.25 0.02 50;
+        --muted: 0.94 0.01 55;
+        --muted-foreground: 0.50 0.02 50;
+        --accent: 0.88 0.03 55;
+        --accent-foreground: 0.25 0.02 50;
+        /* Warm red destructive */
+        --destructive: 0.55 0.22 25;
+        --destructive-foreground: 0.98 0.01 60;
+        --border: 0.88 0.02 55;
+        --input: 0.88 0.02 55;
+        --ring: 0.65 0.15 65;
+        /* Event theme colors */
+        --birthday: 0.70 0.18 330;
+        --travel: 0.65 0.16 200;
+        --work: 0.60 0.14 30;
+        --anniversary: 0.68 0.20 350;
+        --custom: 0.62 0.12 280;
+    }
+
+    .dark {
+        --background: 0.18 0.02 50;
+        --foreground: 0.95 0.01 60;
+        --card: 0.22 0.02 50;
+        --card-foreground: 0.95 0.01 60;
+        --popover: 0.20 0.02 50;
+        --popover-foreground: 0.95 0.01 60;
+        --primary: 0.72 0.16 65;
+        --primary-foreground: 0.18 0.02 50;
+        --secondary: 0.28 0.02 50;
+        --secondary-foreground: 0.95 0.01 60;
+        --muted: 0.26 0.02 50;
+        --muted-foreground: 0.65 0.02 55;
+        --accent: 0.32 0.03 50;
+        --accent-foreground: 0.95 0.01 60;
+        --destructive: 0.60 0.24 25;
+        --destructive-foreground: 0.95 0.01 60;
+        --border: 0.32 0.02 50;
+        --input: 0.32 0.02 50;
+        --ring: 0.72 0.16 65;
+        --birthday: 0.75 0.20 330;
+        --travel: 0.70 0.18 200;
+        --work: 0.68 0.16 30;
+        --anniversary: 0.73 0.22 350;
+        --custom: 0.68 0.14 280;
+    }
+
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+}
+
+@layer utilities {
+    .event-birthday {
+        @apply border-l-4;
+        border-left-color: oklch(var(--birthday));
+    }
+    .event-travel {
+        @apply border-l-4;
+        border-left-color: oklch(var(--travel));
+    }
+    .event-work {
+        @apply border-l-4;
+        border-left-color: oklch(var(--work));
+    }
+    .event-anniversary {
+        @apply border-l-4;
+        border-left-color: oklch(var(--anniversary));
+    }
+    .event-custom {
+        @apply border-l-4;
+        border-left-color: oklch(var(--custom));
+    }
+}

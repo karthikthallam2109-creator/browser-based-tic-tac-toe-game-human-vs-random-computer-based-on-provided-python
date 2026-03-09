@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a web-based Tic-Tac-Toe game playable in the browser, based on the provided Python console implementation (human vs computer with random moves).",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-replace-the-current-countdown-dashboard-ui-with-a-browser-playable-tic-tac-toe-game-screen",
+      "title": "Replace the current countdown dashboard UI with a browser-playable Tic-Tac-Toe game screen.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-3x3-tic-tac-toe-board-ui-that-supports-click-to-move-for-the-human-player-and-displays-the-board-state-using-numbers-for-empty-cells-1-9-and-symbols-for-occupied-cells-o-for-human-x-for-computer-matching-the-provided-python-console-logic",
+      "title": "Implement a 3x3 Tic-Tac-Toe board UI that supports click-to-move for the human player and displays the board state using numbers for empty cells (1–9) and symbols for occupied cells ('O' for human, 'X' for computer), matching the provided Python console logic.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-game-flow-to-match-the-provided-python-version-initialize-the-board-with-x-in-the-center-cell-let-the-human-play-o-let-the-computer-play-x-by-choosing-a-random-free-cell-alternate-turns-and-stop-when-someone-wins-or-the-game-is-a-tie",
+      "title": "Implement the game flow to match the provided Python version: initialize the board with 'X' in the center cell, let the human play 'O', let the computer play 'X' by choosing a random free cell, alternate turns, and stop when someone wins or the game is a tie.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-win-tie-detection-consistent-with-the-provided-python-victory-logic-and-show-an-on-screen-status-message-in-english-indicating-the-current-turn-and-the-final-result-you-won-i-won-or-tie",
+      "title": "Implement win/tie detection consistent with the provided Python victory logic and show an on-screen status message in English indicating the current turn and the final result (\"You won!\", \"I won!\", or \"Tie!\").",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-new-game-restart-control-that-resets-the-game-state-to-the-initial-configuration-numbers-1-9-with-x-in-the-center-and-clears-any-end-of-game-status",
+      "title": "Add a \"New Game\" (restart) control that resets the game state to the initial configuration (numbers 1–9 with 'X' in the center) and clears any end-of-game status.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-app-shell-header-text-to-reflect-the-tic-tac-toe-game-title-and-short-subtitle-in-english-while-keeping-the-existing-overall-layout-structure",
+      "title": "Update the app shell header text to reflect the Tic-Tac-Toe game (title and short subtitle in English) while keeping the existing overall layout structure.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-all-user-facing-text-for-the-tic-tac-toe-experience-is-in-english",
+      "title": "Ensure all user-facing text for the Tic-Tac-Toe experience is in English.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a browser-playable web app version of the provided Python Tic-Tac-Toe game (UI board, click-to-move, human vs computer random move, win/tie detection).",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Browser-based Tic-Tac-Toe game (human vs random computer) based on provided Python logic",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

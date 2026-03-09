@@ -1,0 +1,160 @@
+{
+  "kind": "build_request",
+  "title": "Browser-based Tic-Tac-Toe game (human vs random computer) based on provided Python logic",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Replace the current countdown dashboard UI with a browser-playable Tic-Tac-Toe game screen.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "By using that code create an web and play the game"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navigating to the app shows the Tic-Tac-Toe game instead of the countdown dashboard.",
+        "No countdown-specific UI text (e.g., \"My Countdowns\", \"New Countdown\") appears in the main content area."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement a 3x3 Tic-Tac-Toe board UI that supports click-to-move for the human player and displays the board state using numbers for empty cells (1–9) and symbols for occupied cells ('O' for human, 'X' for computer), matching the provided Python console logic.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "def display_board(board):",
+          "def enter_move(board):"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The board renders as a 3x3 grid.",
+        "Empty cells show their cell number (1–9).",
+        "Clicking an empty cell places an 'O' in that cell.",
+        "Clicking an occupied cell does not change the board state."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement the game flow to match the provided Python version: initialize the board with 'X' in the center cell, let the human play 'O', let the computer play 'X' by choosing a random free cell, alternate turns, and stop when someone wins or the game is a tie.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "board[1][1] = 'X' # set first 'X' in the middle",
+          "human_turn = True",
+          "def draw_move(board):",
+          "while len(free):"
+        ]
+      },
+      "acceptanceCriteria": [
+        "On new game start, the center cell is 'X' before any human move.",
+        "After the human places an 'O', the computer automatically places an 'X' in a random available cell (exact selection is random).",
+        "Turns alternate correctly until the game ends.",
+        "When all cells are filled without a winner, the game ends in a tie."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement win/tie detection consistent with the provided Python victory logic and show an on-screen status message in English indicating the current turn and the final result (\"You won!\", \"I won!\", or \"Tie!\").",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "def victory_for(board,sgn):",
+          "if victor == 'you':",
+          "print(\"You won!\")",
+          "elif victor == 'me':",
+          "print(\"I won\")",
+          "else:",
+          "print(\"Tie!\")"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The game detects wins across rows, columns, and diagonals for both 'O' and 'X'.",
+        "During gameplay, the UI indicates whose turn it is (human or computer).",
+        "When the human wins, the UI displays exactly: \"You won!\"",
+        "When the computer wins, the UI displays exactly: \"I won!\"",
+        "When the game ties, the UI displays exactly: \"Tie!\"",
+        "After the game ends, no further moves can be made until restarting."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Add a \"New Game\" (restart) control that resets the game state to the initial configuration (numbers 1–9 with 'X' in the center) and clears any end-of-game status.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "board = [ [3 * j + i + 1 for i in range(3)] for j in range(3) ]",
+          "board[1][1] = 'X'"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Clicking \"New Game\" resets the board to its initial state with 'X' in the center cell.",
+        "After reset, the status returns to an in-progress state and the human can play again."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Update the app shell header text to reflect the Tic-Tac-Toe game (title and short subtitle in English) while keeping the existing overall layout structure.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "create an web and play the game"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The header title references Tic-Tac-Toe (or \"Tic Tac Toe\").",
+        "The subtitle describes playing in the browser against the computer in English.",
+        "The page remains responsive and usable on mobile and desktop."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Ensure all user-facing text for the Tic-Tac-Toe experience is in English.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Use English for any user-facing text in the build request."
+        ]
+      },
+      "acceptanceCriteria": [
+        "All labels, buttons, and status messages visible in the Tic-Tac-Toe UI are English."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit files under frontend/src/components/ui (Shadcn components must be composed, not modified).",
+    "Do not edit immutable hook paths listed in SYSTEM_CONTEXT (frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx).",
+    "Backend must remain a single Motoko actor; only add backend functionality if required for the Tic-Tac-Toe game."
+  ],
+  "nonGoals": [
+    "Multiplayer (no online play, no two-human mode).",
+    "Advanced AI (no minimax/alpha-beta); computer moves remain random as in the provided code.",
+    "Internet Identity authentication requirements for gameplay.",
+    "Persisting game state across refresh using backend storage."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

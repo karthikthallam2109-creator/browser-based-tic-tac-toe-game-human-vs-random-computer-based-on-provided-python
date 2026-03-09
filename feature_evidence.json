@@ -1,0 +1,138 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-replace-the-current-countdown-dashboard-ui-with-a-browser-playable-tic-tac-toe-game-screen",
+      "featureTitle": "Replace the current countdown dashboard UI with a browser-playable Tic-Tac-Toe game screen.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/features/tictactoe/TicTacToeGame.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-3x3-tic-tac-toe-board-ui-that-supports-click-to-move-for-the-human-player-and-displays-the-board-state-using-numbers-for-empty-cells-1-9-and-symbols-for-occupied-cells-o-for-human-x-for-computer-matching-the-provided-python-console-logic",
+      "featureTitle": "Implement a 3x3 Tic-Tac-Toe board UI that supports click-to-move for the human player and displays the board state using numbers for empty cells (1–9) and symbols for occupied cells ('O' for human, 'X' for computer), matching the provided Python console logic.",
+      "files": [
+        "frontend/src/features/tictactoe/TicTacToeBoard.tsx",
+        "frontend/src/features/tictactoe/TicTacToeGame.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-game-flow-to-match-the-provided-python-version-initialize-the-board-with-x-in-the-center-cell-let-the-human-play-o-let-the-computer-play-x-by-choosing-a-random-free-cell-alternate-turns-and-stop-when-someone-wins-or-the-game-is-a-tie",
+      "featureTitle": "Implement the game flow to match the provided Python version: initialize the board with 'X' in the center cell, let the human play 'O', let the computer play 'X' by choosing a random free cell, alternate turns, and stop when someone wins or the game is a tie.",
+      "files": [
+        "frontend/src/features/tictactoe/TicTacToeGame.tsx",
+        "frontend/src/features/tictactoe/gameLogic.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-win-tie-detection-consistent-with-the-provided-python-victory-logic-and-show-an-on-screen-status-message-in-english-indicating-the-current-turn-and-the-final-result-you-won-i-won-or-tie",
+      "featureTitle": "Implement win/tie detection consistent with the provided Python victory logic and show an on-screen status message in English indicating the current turn and the final result (\"You won!\", \"I won!\", or \"Tie!\").",
+      "files": [
+        "frontend/src/features/tictactoe/TicTacToeBoard.tsx",
+        "frontend/src/features/tictactoe/TicTacToeGame.tsx",
+        "frontend/src/features/tictactoe/gameLogic.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-new-game-restart-control-that-resets-the-game-state-to-the-initial-configuration-numbers-1-9-with-x-in-the-center-and-clears-any-end-of-game-status",
+      "featureTitle": "Add a \"New Game\" (restart) control that resets the game state to the initial configuration (numbers 1–9 with 'X' in the center) and clears any end-of-game status.",
+      "files": [
+        "frontend/src/features/tictactoe/TicTacToeGame.tsx",
+        "frontend/src/features/tictactoe/gameLogic.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-app-shell-header-text-to-reflect-the-tic-tac-toe-game-title-and-short-subtitle-in-english-while-keeping-the-existing-overall-layout-structure",
+      "featureTitle": "Update the app shell header text to reflect the Tic-Tac-Toe game (title and short subtitle in English) while keeping the existing overall layout structure.",
+      "files": [
+        "frontend/src/features/layout/AppShell.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-ensure-all-user-facing-text-for-the-tic-tac-toe-experience-is-in-english",
+      "featureTitle": "Ensure all user-facing text for the Tic-Tac-Toe experience is in English.",
+      "files": [
+        "frontend/src/features/tictactoe/TicTacToeBoard.tsx",
+        "frontend/src/features/tictactoe/TicTacToeGame.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
